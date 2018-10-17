@@ -66,16 +66,16 @@ Create a new sketch with this code: (if you're not sure how to create a new
 sketch, refer back to the previous workshop)
 
 ```js
-function setup() {
-  createCanvas(400, 400)
-  background(255)
+function setup() { // declare a function setup, no parameters
+  createCanvas(400, 400) // call function createCanvas with numbers as two parameters
+  background(255) // call function background with a number as a parameter
 }
 
-function draw() {
-  fill(255, 130, 0)
-  stroke(0)
-  triangle(0, 30, 40, 0, 80, 30)
-  rect(5, 30, 70, 70)
+function draw() { // declare function draw
+  fill(255, 130, 0) // call function fall with three params
+  stroke(0) // call function stroke with one paramm
+  triangle(0, 30, 40, 0, 80, 30) // call function triangle with 6 numbers as parameters
+  rect(5, 30, 70, 70) // call function rect with four params
 }
 ```
 
@@ -83,6 +83,10 @@ function draw() {
 
 **Predict what this will draw when you run it.** Try using a pen and paper to
 help you figure it out.
+
+Function setup will make a call to a library to execute predefined functions inside it. It will create a canvas of 400px width and 200px height with the white background (255, 255, 255);
+
+Function draw will execute four different functions predefined in P5 library. Fill will give a filling of a colour defined in RGB scales via parameters (RED: 255, GREEN: 130, BLUE: 0.... something orange-ish?). Stroke will give a stroke to all the figures (probably black, 1px line, as 0 could mean RGB(0,0,0)). Triangle will draw a triangle shape at the top of our canvas (in a position specified through parameters on axis x,y) and rect draws rectangle under the triangle. A house?
 
 Let’s add our own function. Processing has built-in functions for drawing
 rectangles and other shapes, but let’s add a new one that draws squares. Add
@@ -97,6 +101,7 @@ function square(x, y, size) {
 Replace `rect(5, 30, 70, 70)` with `square(5, 30, 70)` and run your code.
 
 **What’s going on here? What might `x, y, size` mean?**
+We specified a function that always draw a square (rectangle of the same width and height). X, y params specified its position on X and Y axis and size is a size of a rectangle. The function itself calls rect function inside, by passing size as a third and fourth parameter to rect function (and its position, obvs).
 
 **Add a comment above your function saying what the inputs and outputs of your
 function are (name, description, data type) and what your functions does.** You
